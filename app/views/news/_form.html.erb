@@ -1,0 +1,21 @@
+<%= form_for(@news) do |f| %>
+    <% if @news.errors.any? %>
+        <div id="error_explanation">
+            <h2><%= pluralize(@news.errors.count, "error") %> prohibited this news item from being saved:</h2>
+
+            <ul>
+                <% @news.errors.full_messages.each do |message| %>
+                    <li><%= message %></li>
+                <% end %>
+            </ul>
+        </div>
+    <% end %>
+
+    title <%= f.text_field :title %>
+    text <%= f.text_area :text %>
+    photo<%= f.text_field :photo %>
+    <div class="actions">
+
+        <%= f.submit %>
+    </div>
+<% end %>

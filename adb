@@ -1,0 +1,1 @@
+/home/kacha/Desktop/android-sdk-linux/platform-tools/adb
